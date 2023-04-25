@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #F3F5FC;
+}
+
+header img{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+main{
+    width: 100%;
+    height: 600px;
+    background-color: #F3F5FC;
+    display: flex;
+    justify-content: space-between;
+}
+.areadetexto{
+    width:80%;
+    height: 70%;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 30px;
+    border: none;
+    font-size: 25px;
+    outline:none;
+    resize: none;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Kalam', cursive;
+}
+
+.area1{
+    width: 50%;
+    display: inline;
+}
+
+.posicionBotones{
+    text-align: center;
+    margin-right: 60px;
+}
+
+#botonEncriptado{
+    color: white;
+    width: 200px;
+    height: 60px;
+    background-color: darkblue;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: none;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition:2s all;
+    font-family: 'Kalam', cursive;
+}
+
+#botonEncriptado:hover{
+    background: rgb(4, 144, 243);
+    transform: scale(1.1);
+}
+
+#botonDesencriptado{
+    background-color: #D8DFE8;
+    color: darkblue;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border-color: darkblue;
+    margin-top: 10px;
+    border-width: 0.5px;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 2s all;
+    font-family: 'Kalam', cursive;
+}
+
+#botonDesencriptado:hover{
+    background: rgb(160, 199, 228);
+    transform: scale(1.1);
+}
+
+.aclaracion{
+    font-style: italic;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 50px;
+    font-family: 'Kalam', cursive;
+}
+
+.area2{
+    width: 50%; 
+}
+
+.muñeco{
+    margin-left: 220px;
+    width: 230;
+    height:198px ;
+}
+
+#textoDesencriptado{
+    width: 80%;
+    height: 40%;
+    resize: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    font-size: 25px;
+    margin-left: 85px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Kalam', cursive;
+}
+
+#botonCopiar{
+    display: none;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color: #D8DFE8;
+    border-width: 0.5px;
+    color: darkblue;
+    margin-top: 10px;
+    margin-left: 250px;
+    font-family: 'Kalam', cursive;
+}
+   
+
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(1, 1, 90);
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.logolinkedin{
+    width: 20px;
+    height: 20px;
+}
+
+.logogithub{
+    width: 20px;
+    height: 20px;
+}
+
+.piedepagina{
+    margin-top: 4px;
+    font-family: 'Kalam', cursive;
+}
+
+@media screen and (max-width:480px){
+
+    header{
+        background: white;
+    }
+
+    main {
+        position: static;
+        display: flex;
+        justify-content: flex-start;
+        background-color: white;
+    }
+
+
+
+    .posicionBotones{
+        align-items: baseline;
+        display: flex;
+    }
+
+    .muñeco{
+        margin-left: 110px;
+    }
+   .area1, .area2, #botonCopiar, .posicionBotones, #textoDesencriptado, .aclaracion{
+    width: auto;
+    background-color: white;
+    
+   }
+   #textoDesencriptado{
+    margin-right: 60px;
+    margin-left: none;
+   }
+    
+}
