@@ -1,6 +1,6 @@
 # encriptador-de-texto
 
-<h1>Encriptador de texto - Alura ONE challenge</h>
+Encriptador de texto - Alura ONE challenge
 
 Las "llaves" de encriptación que utilizamos fueron las siguientes:
 
