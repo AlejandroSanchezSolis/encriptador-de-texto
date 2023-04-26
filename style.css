@@ -178,15 +178,13 @@ footer{
         background-color: white;
     }
 
-
-
     .posicionBotones{
         align-items: baseline;
         display: flex;
     }
 
     .muneco{
-        margin-left: 145px;
+        margin-left: 170px;
     }
    .area1, .area2, #botonCopiar, .posicionBotones, #textoDesencriptado, .aclaracion{
     width: auto;
