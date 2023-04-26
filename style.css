@@ -132,12 +132,20 @@ main{
     text-align: center;
     font-size: 25px;
     border-radius: 20px;
-    background-color: #D8DFE8;
+    background-color: darkblue;
     border-width: 0.5px;
-    color: darkblue;
+    color: white;
     margin-top: 10px;
     margin-left: 250px;
     font-family: 'Kalam', cursive;
+    cursor: pointer;
+    transition: 2s all;
+
+}
+
+#botonCopiar:hover{
+    background: rgb(4, 144, 243);
+    transform: scale(1.1);
 }
    
 
