@@ -1,36 +1,43 @@
 function encriptar() {
-    var parrafo = document.getElementById("textoAencriptar").value.toLowerCase();
+    var parrafo = document.querySelector(".areadetexto").value.toLowerCase();
 
-    var textoAencriptar = parrafo.replace(/e/img, "enter");
-    var textoAencriptar = textoAencriptar.replace(/o/img, "ober");
-    var textoAencriptar = textoAencriptar.replace(/i/img, "imes");
-    var textoAencriptar = textoAencriptar.replace(/a/img, "ai");
-    var textoAencriptar = textoAencriptar.replace(/u/img, "ufat");
+    var areadetexto = parrafo.replace(/e/img, "enter");
+    var areadetexto = areadetexto.replace(/o/img, "ober");
+    var areadetexto = areadetexto.replace(/i/img, "imes");
+    var areadetexto = areadetexto.replace(/a/img, "ai");
+    var areadetexto = areadetexto.replace(/u/img, "ufat");
 
-    document.getElementById("textoDesencriptado").innerHTML = textoAencriptar
-    document.getElementById("botonCopiar").style.display = "show";
-    document.getElementById("botonCopiar").style.display = "inherit";
-
+    document.querySelector(".textoDesencriptado").value = areadetexto
+    document.querySelector(".botonCopiar").style.display = "show";
+    document.querySelector(".botonCopiar").style.display = "inherit";
+    document.querySelector(".areadetexto").value = ""
+    document.querySelector(".textoDesencriptado").style.backgroundImage = "none"
 
 }
 
 function desencriptar() {
-    var parrafo = document.getElementById("textoAencriptar").value.toLowerCase();
+    var parrafo = document.querySelector(".areadetexto").value.toLowerCase();
 
-    var textoAencriptar = parrafo.replace(/enter/img, "e");
-    var textoAencriptar = textoAencriptar.replace(/ober/img, "o");
-    var textoAencriptar = textoAencriptar.replace(/imes/img, "i");
-    var textoAencriptar = textoAencriptar.replace(/ai/img, "a");
-    var textoAencriptar = textoAencriptar.replace(/ufat/img, "u");
+    var areadetexto = parrafo.replace(/enter/img, "e");
+    var areadetexto = areadetexto.replace(/ober/img, "o");
+    var areadetexto = areadetexto.replace(/imes/img, "i");
+    var areadetexto = areadetexto.replace(/ai/img, "a");
+    var areadetexto = areadetexto.replace(/ufat/img, "u");
 
-    document.getElementById("textoDesencriptado").innerHTML = textoAencriptar;
+    document.querySelector(".textoDesencriptado").value = areadetexto;
+    document.querySelector(".textoDesencriptado").style.backgroundImage = "none"
 }
 
 function copiar(){
-    var contenido = document.querySelector("#textoDesencriptado");
-    contenido.select();
-    document.execCommand("Copy")
-    document.getElementById('textoAencriptar').value = '';
-    document.getElementById('textoAencriptar')
-    textoAencriptar.focus()
+    let textoDesencriptado = document.querySelector(".textoDesencriptado");
+    let text= textoDesencriptado.value;
+    navigator.clipboard.writeText(text);
+    alert("Texto copiado con éxito");
+    document.querySelector(".areadetexto").focus();
+    document.querySelector(".areadetexto").value = "";
+    
+}
+
+function pegar(){
+    navigator.clipboard.readText().then(textoapegar => {document.querySelector('.areadetexto').value = textoapegar;})
 }

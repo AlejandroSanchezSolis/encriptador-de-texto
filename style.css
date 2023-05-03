@@ -1,207 +1,141 @@
 *{
-    box-sizing: border-box;
-     padding: 0;
-     margin: 0;
-}
+    background: #F3F5FC;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    font-family: 'Inter', sans-serif;}
 
-header{
-    width: 100%;
-    height: 70px;
-    background-color: #F3F5FC;
-}
-
-header img{
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-bottom: 30px;
+.logo{
+    padding-top: 10px;
+    width: 10%;
 }
 
 main{
-    width: 100%;
-    height: 600px;
-    background-color: #F3F5FC;
     display: flex;
-    justify-content: space-between;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+    margin-left:88px;
 }
 .areadetexto{
-    width:80%;
-    height: 70%;
-    margin-left: 50px;
-    margin-top: 20px;
-    border-radius: 15px;
-    padding: 30px;
-    border: none;
-    font-size: 25px;
-    outline:none;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 70px;
+    margin-left: 97px;
+    color: #0A3871;
     resize: none;
-    text-align: center;
+    text-transform: lowercase;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    font-family: 'Kalam', cursive;
+    padding:10px;
+    padding-left: 15px;
 }
 
-.area1{
-    width: 50%;
-    display: inline;
+::placeholder { color: #0A3871;}
+    .areadetexto:focus {
+        outline: none;
+    }
+
+.textoDesencriptado{
+    background: white;
+    background-image: url("img/Muñeco.png"), url(img/ausencia\ de\ texto.png);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    border: none;
+    color: #0A3871;
+    border-radius: 25px;
+    margin-left: 98px;
+    margin-top: 28px;
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-right: 28px;
+    resize: none;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.textoDesencriptado:focus{
+    outline: none;
 }
 
 .posicionBotones{
-    text-align: center;
-    margin-right: 60px;
+    display: flex;
+    margin-top: 18px;
 }
 
-#botonEncriptado{
+.botonEncriptado{
     color: white;
-    width: 200px;
-    height: 60px;
-    background-color: darkblue;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border: none;
-    font-size: 25px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    width: 328px;
+    height: 67px;
+    background-color: #0A3871;
+    border-radius: 25px;
+    border: 1px solid #0A3871;
     cursor: pointer;
-    transition:2s all;
-    font-family: 'Kalam', cursive;
 }
 
-#botonEncriptado:hover{
+.botonEncriptado:hover{
     background: rgb(4, 144, 243);
     transform: scale(1.1);
 }
 
-#botonDesencriptado{
-    background-color: #D8DFE8;
-    color: darkblue;
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
-    border-color: darkblue;
-    margin-top: 10px;
-    border-width: 0.5px;
-    font-size: 25px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+.botonDesencriptado{
+    background: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    width: 328px;
+    height: 67px;
+    margin-left: 30px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: 2s all;
-    font-family: 'Kalam', cursive;
 }
 
-#botonDesencriptado:hover{
+.botonDesencriptado:hover{
     background: rgb(160, 199, 228);
     transform: scale(1.1);
 }
 
 .aclaracion{
-    font-style: italic;
-    text-align: center;
-    margin-top: 25px;
-    margin-right: 50px;
-    font-family: 'Kalam', cursive;
+    color: #495057;
+    font-size: 18px;
 }
 
-.area2{
-    width: 50%; 
-}
-
-.muneco{
-    margin-left: 220px;
-    width: 230;
-    height:198px ;
-}
-
-#textoDesencriptado{
-    width: 80%;
-    height: 40%;
-    resize: none;
-    outline: none;
-    border-radius: 15px;
-    padding: 20px;
-    border: none;
-    font-size: 25px;
-    margin-left: 85px;
-    text-align: center;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-    font-family: 'Kalam', cursive;
-}
-
-#botonCopiar{
+.botonCopiar{
     display: none;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-size: 25px;
-    border-radius: 20px;
-    background-color: darkblue;
-    border-width: 0.5px;
+    width: 336px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    background-color: #0A3871;
+    border-radius: 25px;
     color: white;
+    margin-left: 142px;
+    margin-bottom: 10px;
     margin-top: 10px;
-    margin-left: 250px;
-    font-family: 'Kalam', cursive;
+    position:relative;
     cursor: pointer;
-    transition: 2s all;
-
 }
 
-#botonCopiar:hover{
+.botonCopiar:hover{
     background: rgb(4, 144, 243);
     transform: scale(1.1);
 }
-   
 
-footer{
-    width: 100%;
-    height: 70px;
-    background-color: rgb(1, 1, 90);
-    text-align: center;
-    padding: 10px;
+.botonPegar{
     color: white;
+    width: 336px;
+    height: 67px;
+    background-color: #0A3871;
+    border-radius: 25px;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+    display:inline-block;
+    margin-top:40px;
+    margin-left: 205px;
 }
 
-.logolinkedin{
-    width: 20px;
-    height: 20px;
+.botonPegar:hover{
+    background: rgb(4, 144, 243);
+    transform: scale(1.1);
 }
 
-.logogithub{
-    width: 20px;
-    height: 20px;
-}
-
-.piedepagina{
-    margin-top: 4px;
-    font-family: 'Kalam', cursive;
-}
-
-@media screen and (max-width:480px){
-
-    header{
-        background: white;
-    }
-
-    main {
-        position: static;
-        display: flex;
-        justify-content: flex-start;
-        background-color: white;
-    }
-
-    .posicionBotones{
-        align-items: baseline;
-        display: flex;
-    }
-
-    .muneco{
-        margin-left: 170px;
-    }
-   .area1, .area2, #botonCopiar, .posicionBotones, #textoDesencriptado, .aclaracion{
-    width: auto;
-    background-color: white;
-    
-   }
-   #textoDesencriptado{
-    margin-right: 60px;
-    margin-left: none;
-   }
-    
+.piedepagina, a{
+    color: black;
+    text-align: center;
+    font-size: 15px;
 }

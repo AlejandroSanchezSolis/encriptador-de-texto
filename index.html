@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Challenge - Encriptador de Texto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type = "text/javascript" src="script.js"></script>
     
@@ -13,40 +15,49 @@
 
 <body>
     <header>
-        <img src="img/Logo.png" alt="Logo Alura">
+        <img  class="logo" src="img/Logo.png" alt="Logo Alura">
+        <div>
+            <button class="botonPegar">Pegar</button>
+        </div>
     </header>
 
     <main>
-        <section class="area1">
-            <textarea type="text" class="areadetexto" placeholder="Ingrese el mensaje aquí." id ="textoAencriptar"></textarea>
-            <p class="aclaracion">&#128712 Solo letras minúsculas y sin tildes.</p>
+        <section>
+            <textarea type="text" class="areadetexto" cols="20" rows="10" placeholder="Ingrese el mensaje aquí"></textarea>
+            <div>
+                <h6 class="aclaracion">&#128712 Solo letras minúsculas y sin tildes.</h6>
+            </div>
             <div class="posicionBotones">
-                <button type="button" id="botonEncriptado">Encriptar</button>
-                <button type="button" id="botonDesencriptado">Desencriptar</button>
+                <button class="botonEncriptado" type="button">Encriptar</button>
+                <button class="botonDesencriptado" type="button">Desencriptar</button>
             </div>
         </section>
         
-        <section class="area2">
-            <img class="muneco" src="img/Muñeco.png" alt="Muneco observando un diamante">
-            <textarea name="resultado" id="textoDesencriptado" placeholder= "Ningún mensaje fue encontrado. Ingrese el mensaje que quiera encriptar o desencriptar." cols="30" rows="10"></textarea>
-            <button type="button" id="botonCopiar">Copiar texto</button>
+        <section>
+            
+            <textarea class="textoDesencriptado" name="resultado"  cols="20" rows="15"></textarea>
+            <div>
+                <button type="button" class="botonCopiar">Copiar</button>
+            </div>
+            
         </section>
         
     </main>
     <footer>
-        <a href="https://github.com/AlejandroSanchezSolis" rel="noopener noreferrer" target="_blank"><img class="logogithub" src="img/githublogo.png" alt="GitHub Profile"></a>
-            <a href="https://www.linkedin.com/in/alejandro-sanchez-solis" rel="noopener noreferrer" target="_blank"><img class="logolinkedin" src="img/linkedin-logo.png" alt="LinkedIn Profile"></a>
-        <p class="piedepagina">Desarrollado por Alejandro Sanchez Solis</p>
+        <p class="piedepagina">Desarrollado por <a href="https://github.com/AlejandroSanchezSolis">Alejandro Sanchez</a></p>
     </footer>
 </body>
 <script>
-    var btn = document.querySelector("#botonEncriptado");
+    var btn = document.querySelector(".botonEncriptado");
     btn.onclick = encriptar;
 
-    var btn2 = document.querySelector("#botonDesencriptado");
+    var btn2 = document.querySelector(".botonDesencriptado");
     btn2.onclick = desencriptar;
 
-    var btn3 = document.querySelector("#botonCopiar");
+    var btn3 = document.querySelector(".botonCopiar");
     btn3.onclick = copiar;
+
+    var btn4 = document.querySelector(".botonPegar")
+    btn4.onclick = pegar;
 </script>
 </html>
