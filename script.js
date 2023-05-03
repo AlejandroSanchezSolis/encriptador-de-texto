@@ -31,11 +31,10 @@ function desencriptar() {
 function copiar(){
     let textoDesencriptado = document.querySelector(".textoDesencriptado");
     let text= textoDesencriptado.value;
-    navigator.clipboard.writeText(text);
-    alert("Texto copiado con éxito");
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Texto copiado al portapapeles');})
     document.querySelector(".areadetexto").focus();
     document.querySelector(".areadetexto").value = "";
-    
 }
 
 function pegar(){
